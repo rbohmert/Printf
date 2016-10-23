@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_maju.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbohmert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 14:39:14 by rbohmert          #+#    #+#             */
-/*   Updated: 2016/02/02 18:06:23 by rbohmert         ###   ########.fr       */
+/*   Created: 2016/06/12 17:55:31 by rbohmert          #+#    #+#             */
+/*   Updated: 2016/06/12 18:32:18 by rbohmert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_maju(char *s)
 {
-	size_t			i;
-	unsigned char	*tmp;
-	unsigned char	*tmp2;
-	unsigned char	uc;
+	int i;
 
 	i = 0;
-	tmp = (unsigned char *)dst;
-	tmp2 = (unsigned char *)src;
-	uc = (unsigned char)c;
-	while (i < n)
+	while (s[i])
 	{
-		tmp[i] = tmp2[i];
-		if (tmp2[i] == uc)
-			return (tmp + i + 1);
+		if (s[i] > 96 && s[i] < 123)
+			s[i] -= 32;
 		i++;
 	}
-	return (NULL);
+	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:58:11 by nrandria          #+#    #+#             */
-/*   Updated: 2016/02/15 22:22:42 by rbohmert         ###   ########.fr       */
+/*   Updated: 2016/06/12 18:34:27 by rbohmert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include "get_next_line.h"
 
 typedef struct		s_list
 {
@@ -88,5 +89,8 @@ void				ft_push_back(t_list **list, void *content,
 void				ft_push_front(t_list **list, void *content,
 					size_t content_size);
 t_list				*ft_lstat(t_list **list, unsigned int n);
+char				*ft_itoa_base(long long nbr, int base);
+char				*ft_maju(char *s);
+char				*ft_minu(char *s);
 
 #endif

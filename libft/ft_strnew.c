@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nrandria <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rbohmert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 18:40:16 by nrandria          #+#    #+#             */
-/*   Updated: 2015/11/26 19:27:05 by nrandria         ###   ########.fr       */
+/*   Created: 2015/11/25 18:40:16 by rbohmert          #+#    #+#             */
+/*   Updated: 2016/03/27 00:53:17 by rbohmert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ char	*ft_strnew(size_t size)
 	if (ptr == NULL)
 		return (NULL);
 	else
-	{
-		ft_strclr(ptr);
-		*ptr = '\0';
-	}
+		ft_bzero(ptr, size + 1);
 	return (ptr);
 }
